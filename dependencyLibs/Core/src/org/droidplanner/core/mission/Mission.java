@@ -356,7 +356,7 @@ public class Mission extends DroneVariable {
         }
 
         List<MissionItem> dronieItems = new ArrayList<MissionItem>();
-        dronieItems.add(new Takeoff(this, startAltitude));
+        dronieItems.add(new Takeoff(this, startAltitude, 0));
         dronieItems.add(new RegionOfInterest(this,
                 new Coord3D(GeoTools.pointAlongTheLine(start, end, roiDistance), (1.0))));
         dronieItems.add(new Waypoint(this, new Coord3D(end, (startAltitude + GeoTools.getDistance(start, end) / 2.0))));
